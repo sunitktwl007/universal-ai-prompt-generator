@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal AI Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background">
+        <div class="grid-bg"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">Universal AI Prompt Generator</h1>
+            <p class="subtitle">Create perfect prompts for any AI platform</p>
+        </header>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Input Panel -->
+            <div class="panel input-panel">
+                <h2 class="panel-title">Configure Prompt</h2>
+                
+                <div class="form-group">
+                    <label for="userInput">Describe Your Idea</label>
+                    <textarea id="userInput" class="textarea" placeholder="What do you need?..." rows="8"></textarea>
+                    <div class="char-info"><span id="charCount">0</span> / 500 characters</div>
+                </div>
+
+                <div class="selectors">
+                    <div class="form-group">
+                        <label for="typeSelect">Prompt Type</label>
+                        <select id="typeSelect" class="select">
+                            <option value="answer">AI Answer</option>
+                            <option value="image">Image Generation</option>
+                            <option value="coding">Coding</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="script">Video Script</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="toneSelect">Tone</label>
+                        <select id="toneSelect" class="select">
+                            <option value="professional">Professional</option>
+                            <option value="casual">Casual</option>
+                            <option value="aggressive">Aggressive</option>
+                            <option value="creative">Creative</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="platformSelect">Platform</label>
+                        <select id="platformSelect" class="select">
+                            <option value="chatgpt">ChatGPT</option>
+                            <option value="midjourney">Midjourney</option>
+                            <option value="gemini">Gemini</option>
+                            <option value="claude">Claude</option>
+                            <option value="generic">Generic</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button id="generateBtn" class="btn btn-primary">✨ Generate Prompt</button>
+                    <button id="clearBtn" class="btn btn-secondary">🔄 Clear</button>
+                </div>
+            </div>
+
+            <!-- Output Panel -->
+            <div class="panel output-panel">
+                <h2 class="panel-title">Generated Prompt</h2>
+                
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">📝</div>
+                    <p>Your prompt will appear here</p>
+                </div>
+
+                <div id="loadingState" class="loading-state hidden">
+                    <div class="spinner"></div>
+                    <p>Creating your prompt...</p>
+                </div>
+
+                <div id="outputState" class="output-state hidden">
+                    <div id="outputContent" class="output-content"></div>
+                    <div class="output-info">
+                        <span id="wordCount">Words: 0</span>
+                        <span id="charCountOutput">Chars: 0</span>
+                    </div>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn btn-accent">📋 Copy</button>
+                        <button id="downloadBtn" class="btn btn-accent">⬇️ Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Prompts -->
+        <div class="panel recent-panel">
+            <h2 class="panel-title">Recent Prompts</h2>
+            <div id="recentList" class="recent-list"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <!-- Robot Container (STEP 3) -->
+    <div id="robotContainer" class="robot-container"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>🚀 Developed by <strong>Sunit Katuwal</strong> (BSc CSIT)</p>
+        <p class="footer-subtitle">Universal AI Prompt Generator © 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="robot.js"></script>
+</body>
+</html>
